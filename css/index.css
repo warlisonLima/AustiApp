@@ -175,7 +175,7 @@ body {
 
 
 
-/* Estilização dos blocos */
+/* Estilização DO NIVEL DO AUTISMO */
 .nivel {
     display: flex;
     align-items: center;
@@ -206,3 +206,146 @@ body {
 .nivel-1 { background-color: #ffecb3; } /* Amarelo claro */
 .nivel-2 { background-color: #b2dfdb; } /* Verde água */
 .nivel-3 { background-color: #ffcdd2; } /* Rosa claro */
+
+
+
+/* Estilização DO NIVEL DO AUTISMO */
+.section {
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+
+  .definicao {
+    background-color: #fff0a8;
+  }
+
+  .caracteristicas {
+    background-color: #c7f0e1;
+  }
+
+  .legislacao {
+    background-color: #ffd9dc;
+  }
+
+  .titulo {
+    font-size: 1.6em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .titulo img {
+    width: 24px;
+    margin-right: 10px;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  ul li {
+    margin: 8px 0;
+  }
+
+
+
+  /* Estilização DO NIVEL DO AUTISMO */
+
+  .header {
+    background-color: #3d9eea;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: 40px 20px;
+    text-align: center;
+    color: #fff;
+  }
+
+  .header h1 {
+    font-size: 2.2em;
+    margin: 0;
+  }
+
+  .section-title {
+    background-color: #fff;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    padding: 20px;
+    font-size: 1.6em;
+    font-weight: bold;
+    text-align: center;
+    color: #2d2d2d;
+  }
+
+  .content {
+    background-color: #fff;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+
+  .card {
+    display: flex;
+    align-items: center;
+    background-color: #fff6d1;
+    border-radius: 20px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.2s;
+  }
+
+  .card:hover {
+    background-color: #fff3b5;
+  }
+
+  .card:nth-child(2) {
+    background-color: #d6f2ee;
+  }
+
+  .icon {
+    font-size: 2.2em;
+    margin-right: 20px;
+  }
+
+  .card h3 {
+    margin: 0;
+    font-size: 1.3em;
+  }
+
+  .card p {
+    margin: 5px 0 0;
+    font-size: 1em;
+  }
+
+  .footer {
+    background-color: #fff;
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-around;
+    border-top: 2px solid #eee;
+  }
+
+  .footer a {
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 0.85em;
+  }
+
+  .footer a:hover {
+    color: #0077cc;
+  }
+
+  .footer i {
+    font-size: 1.6em;
+    display: block;
+    margin-bottom: 5px;
+  }
