@@ -68,3 +68,43 @@
          color: #003366;
          font-weight: 500;
      }
+
+
+
+
+     /* botao top navbar*/
+     .navbar {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         background-color: #fff;
+         padding: 10px 20px;
+         border-bottom-left-radius: 20%;
+         border-bottom-right-radius: 20%;
+         background-color: var(--azul);
+     }
+
+     .navbar-home,
+     .navbar-titulo {
+         display: flex;
+         align-items: center;
+     }
+
+     .home-button {
+         text-decoration: none;
+         font-weight: bold;
+         color: #007aff;
+         font-size: 16px;
+         background: transparent;
+         border: none;
+         display: flex;
+         align-items: center;
+         gap: 5px;
+     }
+
+     .title {
+         font-size: 18px;
+         font-weight: bold;
+         color: #333;
+
+     }

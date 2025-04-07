@@ -186,9 +186,6 @@ var app = new Framework7({
 		pageAfterIn: function (event, page) {
 		// fazer algo depois da página ser exibida
 
-
-
-
 		
 		},
 		pageInit: function (event, page) {
