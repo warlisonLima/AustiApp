@@ -1,5 +1,29 @@
 /* Estilização MATERIAIS COMPLEMENTARES */
 
+:root {
+  --branco: #ffff;
+  --gelo: #f1f1f1;
+  --verde: #19c463;
+  --preto: #2a2a2a;
+  --cinzaLupa: #b3afaf;
+
+
+ 
+  --cinza: #f4efe9;
+  --cinza2:#f7f9fc;
+  --azul: #bae1f7;
+  --azul2: #b3d6f3;
+  --azul3: #6db3e8;
+  --amarelo: #f3bf14;
+
+
+  --amarelo2: #f3bf14;
+  --verdeClaro: #a9e7d0;
+  --rosa: #fecfc8;
+  --rosa2: #fef7e9;
+
+}
+
 .header {
   background-color: #3d9eea;
   border-radius: 30px;
@@ -32,13 +56,13 @@
   border-top-right-radius: 25px;
 }
 
-.content {
-  background-color: #fff;
-  padding: 20px;
+.contentMateriaisComplementares {
+  background-color:var(--azul2);
+  padding: 5px;
   max-width: 900px;
-  margin: 0 auto;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
+  margin-top: 20px;
+  border-radius: 25px;
+
 }
 
 .card {
@@ -46,37 +70,40 @@
   align-items: center;
   background-color: #fff6d1;
   border-radius: 20px;
-  padding: 15px 20px;
-  margin-bottom: 20px;
+  padding: 2px 5px;
+  margin-bottom: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   text-decoration: none;
   color: #333;
   transition: background-color 0.2s;
+  height: 80px;
 }
 
 .card:hover {
   background-color: #fff3b5;
 }
-
-.card:nth-child(2) {
+/* 
+.card:nth-child(1) {
   background-color: #d6f2ee;
-}
+}*/
 
 .icon {
-  font-size: 2.2em;
-  margin-right: 20px;
+  font-size: 2.5em;
+  margin-right: 0px;
 }
 
 .card h3 {
   margin: 0;
+  padding: 0;
   font-size: 1.3em;
 }
 
+
 .card p {
-  margin: 5px 0 0;
+  margin: 2px 0 0;
   font-size: 1em;
 }
-
+/* 
 .footer {
   background-color: #fff;
   padding: 15px 10px;
@@ -101,3 +128,4 @@
   display: block;
   margin-bottom: 5px;
 }
+*/
