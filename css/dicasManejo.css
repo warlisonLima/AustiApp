@@ -1,0 +1,70 @@
+     /* Estilização DISCA DE MANEJO */
+     .containerDiscaManejo {
+         max-width: 960px;
+         margin: 30px auto;
+         border: 5px solid #004AAD;
+         border-radius: 15px;
+         overflow: hidden;
+         background-color: #fff;
+     }
+
+     /* Topo Colorido */
+     .top-bar {
+         display: grid;
+         justify-content: space-between;
+         align-items: center;
+         background-color: #003366;
+         padding: 10px;
+     }
+
+     .top-sections {
+         display: flex;
+         width: 100%;
+     }
+
+
+
+     .section:nth-child(1) {
+         background-color: #4CAF50;
+     }
+
+     .section:nth-child(2) {
+         background-color: #EF3E4A;
+     }
+
+     .section:nth-child(3) {
+         background-color: #344DFF;
+     }
+
+     .school-student {
+         background-color: #FFD700;
+         display: flex;
+         justify-content: space-around;
+         padding: 10px;
+         font-size: 1.3em;
+         font-weight: bold;
+         color: #003366;
+     }
+
+     .gridDicaManejo {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         gap: 5px;
+         padding: 10px;
+     }
+
+     .label {
+         background-color: #cce6ff;
+         color: #d61a1a;
+         padding: 10px;
+         font-weight: bold;
+         border-radius: 10px;
+     }
+
+     .content {
+         background-color: #f4f4f4;
+         padding: 15px;
+         border-radius: 10px;
+         color: #003366;
+         font-weight: 500;
+     }
