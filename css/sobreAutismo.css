@@ -32,14 +32,17 @@
  }
   
 
-
+.page-content-sobre-autismo {
+ margin-top: 15px;
+  padding-top: 5px;
+}
 
  .sectionSobre {
    max-width: 850px;
-   margin: 30px auto;
+   margin: 20px auto;
    border-radius: 15px;
-   padding: 20px;
-   
+   padding: 10px;
+
    align-content: center;
  }
 
