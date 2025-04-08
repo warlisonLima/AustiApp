@@ -4,11 +4,16 @@
      .containerDisca {
          max-width: 960px;
          margin: 30px auto;
+         padding-top: 20px;
 
          border-radius: 10px;
          overflow: hidden;
          background-color: #fff;
      }
+     .page-content {
+        background-color: var(--cinza2); /* Cor de fundo semelhante ao app */
+       
+    }
 
      /* Topo Colorido */
      .top-bar {
@@ -108,3 +113,4 @@
     width: 140px;
    
 }
+

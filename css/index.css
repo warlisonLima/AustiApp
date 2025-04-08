@@ -24,6 +24,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+
+
+
 body {
     font-family: "Bebas Neue", serif;
     height: 100%; /* Garante que o body possa ocupar toda a altura */
@@ -35,6 +38,9 @@ body {
    
 
 }
+
+
+ /* botao top navbar*/
 
 .toolbar{
     height: 60px;
@@ -67,9 +73,12 @@ body {
     font-size: 26px;
 }
 
-.tituloPrincial {
+.tituloPrincipal {
     color: var(--azul3);
-    line-height: 1.2; /* Remove espaçamento extra entre linhas */
+    line-height: 1.1; /* Remove espaçamento extra entre linhas */
+    margin: 0px;
+    padding: 0px;
+    
 }
 
 
@@ -77,7 +86,7 @@ body {
 .imgBorboletaSf img {
     position: absolute;
     top: 20px; /* Ajuste a posição no topo */
-    right: 20px; /* Ajuste a posição na direita */
+    right: 10px; /* Ajuste a posição na direita */
     width: 90px; /* Ajuste o tamanho para não ocupar muito espaço */
     height: auto; /* Mantém a proporção da imagem */
     z-index: 10; /* Garante que fique sobreposta corretamente */
@@ -91,16 +100,19 @@ body {
     text-align: center;
     width: 100%;
     margin: 10px auto;
-    padding-top: 50px; /* Ajuste para evitar sobreposição */
-    margin: 20px auto;
+    padding-top: 10px; /* Ajuste para evitar sobreposição */
+    margin: 10px auto;
     max-width: 400px;
 }
 
   
 
-.page-content {
+.page-content-index {
     background-color: var(--cinza2); /* Cor de fundo semelhante ao app */
+    margin: 0px;
+    padding: 0px;
 }
+
 
 .gridGeral {
     display: grid;
@@ -190,6 +202,7 @@ body {
     align-items: center;
 }
 
+/* 
 .home-button {
     text-decoration: none;
     font-weight: bold;
@@ -201,6 +214,11 @@ body {
     align-items: center;
     gap: 5px;
 }
+
+*/
+
+
+
 
 .title {
     font-size: 18px;
