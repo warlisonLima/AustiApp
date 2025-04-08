@@ -45,6 +45,14 @@
   margin: 0;
 }
 
+.page-content-matariais {
+  height: calc(100vh - 100px); /* ajuste a altura conforme o tamanho do seu header */
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 150px;
+  overflow-y: auto;
+}
+
 .section-title {
   background-color: #fff;
   padding: 20px;
@@ -82,10 +90,7 @@
 .card:hover {
   background-color: #fff3b5;
 }
-/* 
-.card:nth-child(1) {
-  background-color: #d6f2ee;
-}*/
+
 
 .icon {
   font-size: 2.5em;
@@ -103,29 +108,3 @@
   margin: 2px 0 0;
   font-size: 1em;
 }
-/* 
-.footer {
-  background-color: #fff;
-  padding: 15px 10px;
-  display: flex;
-  justify-content: space-around;
-  border-top: 2px solid #eee;
-}
-
-.footer a {
-  text-align: center;
-  text-decoration: none;
-  color: #333;
-  font-size: 0.85em;
-}
-
-.footer a:hover {
-  color: #0077cc;
-}
-
-.footer i {
-  font-size: 1.6em;
-  display: block;
-  margin-bottom: 5px;
-}
-*/
