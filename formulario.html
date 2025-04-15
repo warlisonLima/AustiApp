@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar (Android only) -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>Formulário de Intervenção</title>
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel="stylesheet" href="lib/framework7-bundle.min.css">
+    <!-- CSS PERSONALIZADO PARA MENU-->
+    <link rel="stylesheet" href="css/personalizado.css">
+    <!--Ícones Material Design-->
+    <link rel="stylesheet" href="css/materialdesignicons.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+
+<style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .section { margin-bottom: 20px; }
+    label { display: block; margin-bottom: 5px; }
+    input[type="text"], input[type="date"] { padding: 5px; }
+    h1 { color: #3366cc; }
+    button { padding: 10px 20px; background: #28a745; color: white; border: none; cursor: pointer; }
+  </style>
+
+<body>
+    <!-- App root element -->
+    <div id="app">
+
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Initial Page, "data-name" contains page name -->
+            <div data-name="formulario" class="page">
+
+                <!-- Top Navbar 
+                <div class="navbar">
+                    <div class="navbar-bg"></div>
+                    <div class="navbar-inner justify-content-center">
+                        <div class="title ">Link 2</div>
+                    </div>
+                </div>-->
+
+                <!-- Scrollable page content -->
+                <div class="page-content">
+                    <div class="block">
+
+                        <h1>📋 Formulário de Intervenção</h1>
+
+                        <div class="section">
+                          <label>Nome da Criança: <input type="text" id="nomeCrianca"></label>
+                          <label>Data do Preenchimento: <input type="date" id="dataPreenchimento"></label>
+                        </div>
+                      
+                        <div class="section">
+                          <h3>🧠 Pontos fortes da criança</h3>
+                          <label><input type="checkbox" name="pontos_fortes" value="Memória visual"> Memória visual</label>
+                          <label><input type="checkbox" name="pontos_fortes" value="Boa coordenação motora"> Boa coordenação motora</label>
+                        </div>
+                      
+                        <div class="section">
+                          <h3>📈 Dificuldades de aprendizagem</h3>
+                          <label><input type="checkbox" name="dificuldades" value="Leitura"> Leitura</label>
+                          <label><input type="checkbox" name="dificuldades" value="Escrita"> Escrita</label>
+                          <label><input type="checkbox" name="dificuldades" value="Atenção e foco"> Atenção e foco</label>
+                          <label><input type="checkbox" name="dificuldades" value="Organização de tarefas"> Organização de tarefas</label>
+                        </div>
+                      
+                        <div class="section">
+                          <h3>🗣️ Comunicação</h3>
+                          <label><input type="checkbox" name="comunicacao" value="Não verbal"> Não verbal</label>
+                          <label><input type="checkbox" name="comunicacao" value="Verbal com dificuldades"> Verbal com dificuldades</label>
+                        </div>
+                      
+                        <div class="section">
+                          <h3>🎯 Objetivos</h3>
+                          <label><input type="checkbox" name="objetivos" value="Melhorar atenção e foco"> Melhorar atenção e foco</label>
+                        </div>
+                      
+                        <button id="botaoExportar">📤 Exportar para PDF</button>
+                      
+                        <script>
+                          document.getElementById("botaoExportar").addEventListener("click", function () {
+                            const nomeCrianca = document.getElementById("nomeCrianca").value || "Nome não informado";
+                            const dataPreenchimento = document.getElementById("dataPreenchimento").value || "Data não informada";
+                      
+                            const selecionados = document.querySelectorAll("input[type='checkbox']:checked");
+                            let respostas = {};
+                            selecionados.forEach(el => {
+                              const nome = el.name;
+                              if (!respostas[nome]) respostas[nome] = [];
+                              respostas[nome].push(el.value);
+                            });
+                      
+                            let plano = `📋 PLANO DE INTERVENÇÃO INDIVIDUALIZADO\n\n👧 Nome da Criança: ${nomeCrianca}\n📅 Data: ${dataPreenchimento}\n\n🔍 ÁREAS A DESENVOLVER E ESTRATÉGIAS\n`;
+                      
+                            plano += "\n📘 Cognitivo e Acadêmico\n";
+                            if (respostas.dificuldades?.includes("Leitura")) plano += "- Usar leitura guiada com reforço positivo.\n";
+                            if (respostas.dificuldades?.includes("Escrita")) plano += "- Exercícios de pré-escrita com coordenação motora.\n";
+                            if (respostas.dificuldades?.includes("Atenção e foco")) plano += "- Timer visual e atividades práticas.\n";
+                            if (respostas.dificuldades?.includes("Organização de tarefas")) plano += "- Checklists visuais e passo a passo.\n";
+                      
+                            plano += "\n🗣️ Comunicação\n";
+                            if (respostas.comunicacao?.includes("Não verbal")) plano += "- Comunicação alternativa (CAA).\n";
+                            if (respostas.comunicacao?.includes("Verbal com dificuldades")) plano += "- Jogos de linguagem e apoio fonoaudiológico.\n";
+                      
+                            plano += "\n🎯 Metas do semestre\n";
+                            if (respostas.objetivos?.includes("Melhorar atenção e foco")) plano += "- Estabelecer rotina visual com reforço positivo.\n";
+                      
+                            const { jsPDF } = window.jspdf;
+                            const doc = new jsPDF();
+                            doc.setFont("Courier", "normal");
+                            const linhas = doc.splitTextToSize(plano, 180);
+                            doc.text(linhas, 10, 10);
+                            doc.save(`PEI_${nomeCrianca.replace(/\s+/g, '_')}.pdf`);
+                          });
+                        </script>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- Path to Framework7 Library Bundle JS-->
+
+</body>
+
+</html>
